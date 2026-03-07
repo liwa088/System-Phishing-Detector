@@ -1,15 +1,15 @@
-# Phishing URL Detection System
+# Phishing Detection System (URL + Email)
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
 ![Interface](https://img.shields.io/badge/Interface-Gradio-green)
 ![Deployment](https://img.shields.io/badge/Deployment-HuggingFace-yellow)
 ![Status](https://img.shields.io/badge/Project-Active-brightgreen)
 
-A **Machine Learning-based phishing detection system** that analyzes URLs and predicts whether they are **phishing or legitimate**.  
-The project uses **Natural Language Processing techniques and classical ML models** to identify suspicious patterns in URLs.
+A **Machine Learning-based phishing detection system** capable of identifying **phishing URLs and phishing emails**.  
+The system analyzes suspicious patterns in both **web links and email text** to determine whether the content is **malicious or legitimate**.
 
-The application is deployed using **Gradio** and hosted on **Hugging Face Spaces**.
+The application is deployed using **Gradio** and hosted on **Hugging Face Spaces** for interactive testing.
 
 ---
 
@@ -17,32 +17,65 @@ The application is deployed using **Gradio** and hosted on **Hugging Face Spaces
 
 Try the system online:
 
-Hugging Face Demo  
+**Hugging Face Demo**
+
 https://huggingface.co/spaces/Liwa08/System_Phishing_Detector
 
-Users can input a URL and instantly receive a prediction indicating whether the website is **safe or phishing**.
+Users can test the system by entering:
+
+- a **URL** to check if it is phishing  
+- an **email message** to detect phishing attempts  
 
 ---
 
 # Project Overview
 
-Phishing is one of the most common cyber attacks used to steal sensitive information such as:
+Phishing attacks are among the most common cybersecurity threats. Attackers often use:
 
-- Login credentials
-- Banking information
-- Personal data
+- malicious links
+- fake login pages
+- deceptive emails
 
-This project builds an **intelligent phishing detection system** that analyzes URLs and identifies suspicious characteristics using machine learning.
+to steal sensitive information such as:
+
+- passwords
+- banking credentials
+- personal data
+
+This project builds a **machine learning system that detects phishing attempts from both URLs and emails**.
+
+---
+
+# System Capabilities
+
+The system includes two detection modules:
+
+### URL Phishing Detection
+Analyzes suspicious characteristics of URLs such as:
+
+- domain patterns
+- unusual tokens
+- special characters
+- URL length
+- suspicious keywords
+
+### Email Phishing Detection
+Analyzes email text using **Natural Language Processing (NLP)** techniques to detect:
+
+- suspicious wording
+- phishing language patterns
+- malicious intent
 
 ---
 
 # Features
 
-- URL feature extraction
-- NLP feature engineering using **TF-IDF**
+- Phishing **URL detection**
+- Phishing **email detection**
+- Feature extraction from URLs
+- NLP processing for email analysis
 - Multiple machine learning models
-- Real-time phishing prediction
-- Interactive **Gradio web interface**
+- Interactive **Gradio interface**
 - Cloud deployment using **Hugging Face Spaces**
 
 ---
@@ -65,14 +98,13 @@ This project builds an **intelligent phishing detection system** that analyzes U
 
 # Machine Learning Models
 
-The following models were used for phishing detection:
+The system uses different models trained for phishing detection:
 
 | Model | Purpose |
 |------|------|
-| Logistic Regression | Baseline classification |
-| Linear SVM | High dimensional classification |
+| Logistic Regression | Baseline classifier |
+| Linear SVM | High-dimensional text classification |
 | Random Forest | Ensemble learning |
+| XGBoost | High-performance boosting model |
 
 ---
-
-# Project Structure
